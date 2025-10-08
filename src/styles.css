@@ -1,0 +1,27 @@
+:root{
+  --bg: #0f172a;
+  --card: #0b1220;
+  --accent: #f97316;
+  --muted: #98a8c3;
+  --glass: rgba(255,255,255,0.04);
+}
+*{box-sizing:border-box}
+body{font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial; margin:0; min-height:100vh; background:linear-gradient(180deg,#071029 0%, #0f172a 100%); color:#e6eef8; display:flex; align-items:center; justify-content:center; padding:2rem}
+.app{width:100%; max-width:900px}
+header{display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem}
+header h1{font-size:1.6rem; margin:0}
+main{display:grid; grid-template-columns:1fr 320px; gap:1rem}
+@media (max-width:800px){main{grid-template-columns:1fr;}}
+.timer{background:var(--card); padding:1.5rem; border-radius:12px; box-shadow:0 8px 24px rgba(2,6,23,0.6)}
+.mode{display:flex; justify-content:space-between; align-items:center}
+.mode h2{margin:0}
+.clock{display:flex; flex-direction:column; align-items:center; margin-top:1rem}
+.time{font-size:3rem; font-weight:700; margin:0.5rem 0}
+.controls button{margin:0 .25rem; padding:.6rem 1rem; border-radius:8px; border:0; background:var(--glass); color:var(--accent); cursor:pointer}
+.controls button:focus{outline:2px solid #fbbf24}
+.quick-modes{display:flex; gap:.5rem; margin-top:1rem}
+.quick-modes button{flex:1; padding:.5rem; border-radius:8px; border:0; background:transparent; color:var(--muted); cursor:pointer}
+.settings{background:var(--card); padding:1rem; border-radius:12px}
+.settings label{display:block; margin-bottom:.75rem; color:var(--muted)}
+.settings input{width:100%; padding:.5rem; border-radius:6px; border:1px solid rgba(255,255,255,0.04); margin-top:.25rem; background:transparent; color:inherit}
+footer{margin-top:1rem; text-align:center; color:var(--muted)}
